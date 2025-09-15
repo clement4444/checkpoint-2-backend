@@ -1,13 +1,26 @@
+<!-- omit in toc -->
 # Checkpoint 2 Backend
 Checkpoint pour tester les connaissances en backend, réaliser le 15/09/2025
+## Table des matières
+- [Table des matières](#table-des-matières)
+- [Rappel des consignes:](#rappel-des-consignes)
+- [Installation](#installation)
+
 ## Rappel des consignes:
+<!-- omit in toc -->
 ### Checkpoint n°2 CDA JS - Backend
-Le but de ce checkpoint est de vérifier tes connaissances en développement backend.  
-Commence par initialiser un nouveau repo git, il te servira à faire le rendu du checkpoint.  
-Crée un nouveau projet NodeJS Typescript.  
-Pour un meilleur confort de dev, utilise ts-node-dev.  
-Le but de cet exercice est de créer une API GraphQL avec Apollo Server et Typegraphql pour enregistrer et lire des pays avec leur code, leur nom et leur emoji.  
-Utilise une base de données SQLite et TypeORM en ORM.  
+Le but de ce checkpoint est de vérifier tes connaissances en développement backend.
+
+Commence par initialiser un nouveau repo git, il te servira à faire le rendu du checkpoint.
+
+Crée un nouveau projet NodeJS Typescript.
+
+Pour un meilleur confort de dev, utilise ts-node-dev.
+
+Le but de cet exercice est de créer une API GraphQL avec Apollo Server et Typegraphql pour enregistrer et lire des pays avec leur code, leur nom et leur emoji.
+
+Utilise une base de données SQLite et TypeORM en ORM.
+
 Voici les packages dont tu auras besoin et leur version :
 ```json
 "dependencies": {
@@ -24,9 +37,39 @@ Crée une mutation qui prend en paramètres :
 - un nom (France, Belgique, Andorre, ...),
 - un emoji (🇫🇷, 🇧🇪, 🇦🇩, ...),  
 
-et qui enregistre cette entrée en BDD.  
+et qui enregistre cette entrée en BDD.
+
 Crée ensuite 2 queries :
 - Une qui renvoie la liste de tous les pays (avec pour attributs, pour chaque pays, le code, le nom, l'emoji)
 - Une autre qui prend en paramètre le code du pays et qui renvoie le pays en question
+
 Et pour finir,
 - Ajoute un code continent à la mutation d'ajout de pays et une query qui permet de récupérer tous les pays d'un continent
+
+## Installation
+Guide pour lancer le projet en local
+
+- Clone le dépôt gitHub 
+```bash
+git clone <repo_url>
+```
+- Dans un terminal, renter dans le dossier du projet
+```bash
+cd checkpoint-2-backend
+```
+- Copier le fichier .env.example en .env (ou via explorer de fichier ou cette commande)
+```bash
+cp .env.example .env
+```
+- remplir les variables d'environnement dans le fichier .env correctement
+- Installer les dépendances
+```bash
+npm install
+```
+- Lancer le serveur
+```bash
+npm run dev
+```
+- 🎉 le projet est lancer en local sur votre machine
+- http://localhost:PORT_DU_.ENV pour accéder à l'interface GraphQL ou  
+  http://localhost:3000 si le .env n'est pas configuré (port par défaut)
